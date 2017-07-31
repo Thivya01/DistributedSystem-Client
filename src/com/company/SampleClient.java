@@ -21,12 +21,9 @@ public class SampleClient
             socket = new Socket(address, port);
 
             //Send the message to the server
-
             OutputStream outputStream = socket.getOutputStream();
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
             BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
-
-
 
             bufferedWriter.write("Hello");
             bufferedWriter.flush();
