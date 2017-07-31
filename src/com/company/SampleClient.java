@@ -6,13 +6,13 @@ import java.net.InetAddress;
 import java.net.Socket;
 
 
-public class SampleClient
+class SampleClient implements Runnable
 {
 
     private static Socket socket;
 
-    public static void main(String args[])
-    {
+    @Override
+    public void run() {
         try
         {
             String host = "localhost";
@@ -50,4 +50,8 @@ public class SampleClient
             }
         }
     }
+
 }
+
+
+
